@@ -38,10 +38,18 @@ struct RegisterView: View {
                 print(res)
                 
                 
-                if let res = res as? HTTPURLResponse{
-                    print(res.statusCode)
+                guard let registerResponse = try? JSONDecoder().decode(RegisterResponse.self, from: data)
+                else{
+                    return
                 }
-               
+                
+                if(registerResponse.status == nil){
+                    
+                    isRegistered = true
+                }
+                else{
+                    isRegistered = false
+                }
                 
                   
                 
@@ -121,6 +129,7 @@ struct RegisterView: View {
                 }.navigationDestination(isPresented: $isRegistered){
                     LoginView()
                 }
+                .navigationBarBackButtonHidden()
             }
         }
     }

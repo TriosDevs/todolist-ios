@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E5524112941112A00715359 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5524102941112A00715359 /* LoginResponse.swift */; };
+		2E55241329414C7200715359 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55241229414C7200715359 /* RegisterResponse.swift */; };
 		2E620616293FA141001764CE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E620615293FA141001764CE /* LoginView.swift */; };
 		2E620618293FA190001764CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E620617293FA190001764CE /* RegisterView.swift */; };
 		2E62061F293FC84D001764CE /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62061E293FC84D001764CE /* RegisterModel.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		2E5524102941112A00715359 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		2E55241229414C7200715359 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		2E620615293FA141001764CE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2E620617293FA190001764CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2E62061E293FC84D001764CE /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 				2E62061E293FC84D001764CE /* RegisterModel.swift */,
 				2E674F742940D2B20041E64E /* LoginModel.swift */,
 				2E5524102941112A00715359 /* LoginResponse.swift */,
+				2E55241229414C7200715359 /* RegisterResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				2E62061F293FC84D001764CE /* RegisterModel.swift in Sources */,
 				2E5524112941112A00715359 /* LoginResponse.swift in Sources */,
 				2E620616293FA141001764CE /* LoginView.swift in Sources */,
+				2E55241329414C7200715359 /* RegisterResponse.swift in Sources */,
 				2E620618293FA190001764CE /* RegisterView.swift in Sources */,
 				2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */,
 			);
