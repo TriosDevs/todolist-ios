@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        Text("This is List View!")
+        ZStack{
+            Color(red: 232/255, green: 227/255, blue: 227/255)
+                .ignoresSafeArea()
+            VStack{
+                Text("This is List View!")
+            }
+        }
     }
 }
 

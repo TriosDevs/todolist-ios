@@ -142,6 +142,8 @@ class APIService {
                     return
                 }
 
+                print(res)
+
                 guard let token = res.content else{
                     
                     return
