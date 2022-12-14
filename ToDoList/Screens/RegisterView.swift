@@ -8,62 +8,14 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var input: String = ""
-    @State var registerInput = RegisterModel()
-    @State var isRegistered: Bool = false
-    
-    var postUrl = "http://todolist-api.oguzhanercelik.dev/auth"
-    func postData(){
-        
-        guard let url = URL(string: postUrl) else {return}
-        
-        let body: [String: AnyHashable] = ["name": registerInput.name, "surname": registerInput.surname, "mail": registerInput.mail, "password": registerInput.password]
-        
-        let finalData = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = finalData
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        
-        URLSession.shared.dataTask(with: request) { data, res, err in
-            
-            guard let data = data, err == nil else {
-                return
-            }
-            do{
-                let res = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                
-                print(res)
-                
-                
-                guard let registerResponse = try? JSONDecoder().decode(RegisterResponse.self, from: data)
-                else{
-                    return
-                }
-                
-                if(registerResponse.status == nil){
-                    
-                    isRegistered = true
-                }
-                else{
-                    isRegistered = false
-                }
-                
-                  
-                
-               
-            }
-            catch {
-                print(err)
-            }
-            
-        }.resume()
+
+
+
+    @StateObject private var registerModel = RegisterViewModel()
         
         
         
-    }
+
     var body: some View {
         NavigationStack {
             ZStack{
@@ -83,7 +35,7 @@ struct RegisterView: View {
                     VStack(spacing: 20){
                         
                         
-                        TextField("", text: $registerInput.name, prompt: Text("Name"))
+                        TextField("", text: $registerModel.name, prompt: Text("Name"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                         
@@ -93,21 +45,21 @@ struct RegisterView: View {
                         
                         
                         
-                        TextField("", text: $registerInput.surname, prompt: Text("Surname"))
-                            .textFieldStyle(.roundedBorder)
-                            .frame(width: 300)
-                            .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1))
-                            .cornerRadius(15.0)
-                            .disableAutocorrection(true)
-                            .autocapitalization(.none)
-                        TextField("", text: $registerInput.mail, prompt: Text("Email"))
+                        TextField("", text: $registerModel.surname, prompt: Text("Surname"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                             .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1))
                             .cornerRadius(15.0)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
-                        SecureField("", text: $registerInput.password, prompt: Text("Password"))
+                        TextField("", text: $registerModel.mail, prompt: Text("Email"))
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 300)
+                            .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1))
+                            .cornerRadius(15.0)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                        SecureField("", text: $registerModel.password, prompt: Text("Password"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                             .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1), width: 100)
@@ -117,8 +69,9 @@ struct RegisterView: View {
                         
                         
                         Button(action: {
-                          
-                           postData()
+
+                            registerModel.register()
+                            
                         }, label: {
                             Text("Register")
                         })
@@ -126,7 +79,7 @@ struct RegisterView: View {
                         
                         
                     }
-                }.navigationDestination(isPresented: $isRegistered){
+                }.navigationDestination(isPresented: $registerModel.isRegistered){
                     LoginView()
                 }
                 .navigationBarBackButtonHidden()

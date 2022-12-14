@@ -17,11 +17,11 @@ struct MainView: View {
         UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
         
         UITabBar.appearance().unselectedItemTintColor = UIColor.black
-       
-       
-       
-       
-}
+        
+        
+        
+        
+    }
     
     var body: some View {
         TabView{
@@ -29,8 +29,8 @@ struct MainView: View {
             HomeView()
                 .tabItem {
                     Label("Home",systemImage: "house")
-                   
-                        
+                    
+                    
                     
                     
                     
@@ -40,7 +40,7 @@ struct MainView: View {
             
             ListView()
                 .tabItem {
-                        
+                    
                     HStack{
                         Label("List",systemImage: "list.bullet.clipboard")
                             .font(.system(size: 120))
@@ -66,10 +66,10 @@ struct MainView: View {
         .tint(.blue)
         .edgesIgnoringSafeArea(.all)
         .frame(height: 877)
-    
         
         
-       
+        
+        
         
         
     }
