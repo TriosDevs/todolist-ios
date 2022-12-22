@@ -37,6 +37,7 @@ struct ListTemplateView: View {
                 Text(listName)
                     .font(.title2)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(.black)
                     .offset(x: 50)
 
 

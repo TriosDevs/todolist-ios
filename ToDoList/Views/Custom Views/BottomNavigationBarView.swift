@@ -53,6 +53,6 @@ struct BottomNavigationBarView: View {
 
 struct BottomNavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomNavigationBarView(tabSelection: .constant(.checklist))
+        BottomNavigationBarView(tabSelection: .constant(.house))
     }
 }

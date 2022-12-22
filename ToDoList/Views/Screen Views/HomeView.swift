@@ -15,11 +15,43 @@ struct HomeView: View {
                 .ignoresSafeArea()
             VStack(spacing: 30){
                 AppBarView(appBarTitle: "Home")
-                ScrollView{
-                    ListTemplateView(listName: lists[0].name, taskCount: 5)
-                        .padding(.vertical, 16)
-                }
+                ZStack {
+                    CardShape(tl: 20, tr: 20)
+                        .fill(.white)
+                        .frame(width: 350, height: 400)
 
+                    ZStack{
+                        CardShape(tl: 20, tr: 20)
+                            .fill(Color(red: 60/255, green: 65/255, blue: 103/255))
+                            .frame(width: 350, height: 80)
+                            .offset(y: -220)
+                        Ellipse()
+                            .frame(width: 20, height: 20)
+                            .offset(x: -140, y: -220)
+                            .foregroundColor(.white)
+                        Text("My List")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .offset(x: 80, y: -220)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    VStack{
+
+
+                        TaskItemView()
+                            .padding(.vertical, 5)
+                        TaskItemView()
+                            .padding(.vertical, 5)
+                        TaskItemView()
+                            .padding(.vertical, 5)
+                        TaskItemView()
+                            .padding(.vertical, 5)
+                        TaskItemView()
+                            .padding(.vertical, 5)
+
+                    }
+                }
+                Spacer()
                 Button(action: {
                            print("Round Action")
                            }) {

@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     
-    @State private var tabSelection: Tab = .checklist
+    @State private var tabSelection: Tab = .house
 
     init(){
         UITabBar.appearance().isHidden = true
