@@ -11,21 +11,10 @@ struct ListView: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-    var btnBack: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }, label: {
 
-            HStack{
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.white)
-                    .font(.system(size: 25))
-                    .offset(y: 55)
-            }
-
-        })
-    }
     var lists: [ListModel] = listData
+
+
     var body: some View {
         NavigationStack {
             ZStack{
@@ -45,6 +34,8 @@ struct ListView: View {
                                 ListTemplateView(listName: list.name, taskCount: 5)
                                     
                                     .padding(.vertical, 16)
+
+
 
                             }
                                 

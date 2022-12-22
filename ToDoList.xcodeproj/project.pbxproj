@@ -30,7 +30,7 @@
 		2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E9339293EAC9800AB134A /* ToDoListApp.swift */; };
 		2E8E933E293EAC9900AB134A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E933D293EAC9900AB134A /* Assets.xcassets */; };
 		2E8E9341293EAC9900AB134A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E9340293EAC9900AB134A /* Preview Assets.xcassets */; };
-		2ED496432950A05700C19613 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED496422950A05700C19613 /* ButtonView.swift */; };
+		2EFB2F872954A90C00CC0EEE /* CreateListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB2F862954A90C00CC0EEE /* CreateListPopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +58,7 @@
 		2E8E9339293EAC9800AB134A /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		2E8E933D293EAC9900AB134A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E8E9340293EAC9900AB134A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2ED496422950A05700C19613 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		2EFB2F862954A90C00CC0EEE /* CreateListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListPopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +109,10 @@
 		2E713494294A68F3009C2853 /* Screen Views */ = {
 			isa = PBXGroup;
 			children = (
-				2E552416294255C600715359 /* HomeView.swift */,
-				2E552418294255D000715359 /* ListView.swift */,
-				2E55241A294255D800715359 /* ProfileView.swift */,
-				2E04FEED2954711500DE3F01 /* TaskView.swift */,
+				2EFB2F882954B8AB00CC0EEE /* Home */,
+				2EFB2F892954B8BD00CC0EEE /* List */,
+				2EFB2F8A2954B8C600CC0EEE /* Profile */,
+				2EFB2F8B2954B8CF00CC0EEE /* Task */,
 			);
 			path = "Screen Views";
 			sourceTree = "<group>";
@@ -120,13 +120,11 @@
 		2E713495294A690A009C2853 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				2E713492294A3976009C2853 /* BottomNavigationBarView.swift */,
-				2ED496422950A05700C19613 /* ButtonView.swift */,
-				2E075C1E2951B905007F6D97 /* ListTemplateView.swift */,
-				2E13F0F6295389FD00267198 /* AppBarView.swift */,
-				2E04FEE82953C27C00DE3F01 /* TaskTemplateView.swift */,
-				2E04FEEF2954744100DE3F01 /* TaskItemView.swift */,
-				2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */,
+				2EFB2F852954A85200CC0EEE /* Popup */,
+				2EFB2F812954A7F400CC0EEE /* BottomNavigationBar */,
+				2EFB2F822954A80500CC0EEE /* List */,
+				2EFB2F832954A81200CC0EEE /* AppBar */,
+				2EFB2F842954A81D00CC0EEE /* Task */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -183,9 +181,9 @@
 		2E8E9347293EAD5700AB134A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				2E620615293FA141001764CE /* LoginView.swift */,
-				2E620617293FA190001764CE /* RegisterView.swift */,
-				2E552414294255B400715359 /* MainView.swift */,
+				2EFB2F8C2954B8DB00CC0EEE /* Login */,
+				2EFB2F8D2954B8E200CC0EEE /* Register */,
+				2EFB2F8E2954B8E800CC0EEE /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -197,6 +195,104 @@
 				2E713495294A690A009C2853 /* Custom Views */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2EFB2F812954A7F400CC0EEE /* BottomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				2E713492294A3976009C2853 /* BottomNavigationBarView.swift */,
+			);
+			path = BottomNavigationBar;
+			sourceTree = "<group>";
+		};
+		2EFB2F822954A80500CC0EEE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2E075C1E2951B905007F6D97 /* ListTemplateView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		2EFB2F832954A81200CC0EEE /* AppBar */ = {
+			isa = PBXGroup;
+			children = (
+				2E13F0F6295389FD00267198 /* AppBarView.swift */,
+				2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */,
+			);
+			path = AppBar;
+			sourceTree = "<group>";
+		};
+		2EFB2F842954A81D00CC0EEE /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				2E04FEE82953C27C00DE3F01 /* TaskTemplateView.swift */,
+				2E04FEEF2954744100DE3F01 /* TaskItemView.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		2EFB2F852954A85200CC0EEE /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				2EFB2F862954A90C00CC0EEE /* CreateListPopupView.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		2EFB2F882954B8AB00CC0EEE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2E552416294255C600715359 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2EFB2F892954B8BD00CC0EEE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2E552418294255D000715359 /* ListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		2EFB2F8A2954B8C600CC0EEE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2E55241A294255D800715359 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2EFB2F8B2954B8CF00CC0EEE /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				2E04FEED2954711500DE3F01 /* TaskView.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		2EFB2F8C2954B8DB00CC0EEE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2E620615293FA141001764CE /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2EFB2F8D2954B8E200CC0EEE /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2E620617293FA190001764CE /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		2EFB2F8E2954B8E800CC0EEE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2E552414294255B400715359 /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +368,6 @@
 				2E713493294A3976009C2853 /* BottomNavigationBarView.swift in Sources */,
 				2E04FEF22954945E00DE3F01 /* AppBarWithBackButtonView.swift in Sources */,
 				2E801989294D2B7B0070D5AD /* ListData.swift in Sources */,
-				2ED496432950A05700C19613 /* ButtonView.swift in Sources */,
 				2E04FEF02954744100DE3F01 /* TaskItemView.swift in Sources */,
 				2E04FEEE2954711500DE3F01 /* TaskView.swift in Sources */,
 				2E552417294255C600715359 /* HomeView.swift in Sources */,
@@ -289,6 +384,7 @@
 				2E04FEE92953C27C00DE3F01 /* TaskTemplateView.swift in Sources */,
 				2E713499294B8EA9009C2853 /* ListModel.swift in Sources */,
 				2E17187E2949A90B00969D88 /* LoginViewModel.swift in Sources */,
+				2EFB2F872954A90C00CC0EEE /* CreateListPopupView.swift in Sources */,
 				2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */,
 				2E13F0F7295389FD00267198 /* AppBarView.swift in Sources */,
 			);
