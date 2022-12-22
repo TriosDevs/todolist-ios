@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E04FEE92953C27C00DE3F01 /* TaskTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FEE82953C27C00DE3F01 /* TaskTemplateView.swift */; };
+		2E04FEEC2953C31000DE3F01 /* CardShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FEEB2953C31000DE3F01 /* CardShape.swift */; };
+		2E04FEEE2954711500DE3F01 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FEED2954711500DE3F01 /* TaskView.swift */; };
+		2E04FEF02954744100DE3F01 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FEEF2954744100DE3F01 /* TaskItemView.swift */; };
+		2E04FEF22954945E00DE3F01 /* AppBarWithBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */; };
+		2E075C1F2951B905007F6D97 /* ListTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E075C1E2951B905007F6D97 /* ListTemplateView.swift */; };
+		2E13F0F7295389FD00267198 /* AppBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13F0F6295389FD00267198 /* AppBarView.swift */; };
 		2E17187A2948C1E500969D88 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1718792948C1E500969D88 /* APIService.swift */; };
 		2E17187C2949422A00969D88 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17187B2949422A00969D88 /* RegisterViewModel.swift */; };
 		2E17187E2949A90B00969D88 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17187D2949A90B00969D88 /* LoginViewModel.swift */; };
@@ -17,12 +24,23 @@
 		2E620616293FA141001764CE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E620615293FA141001764CE /* LoginView.swift */; };
 		2E620618293FA190001764CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E620617293FA190001764CE /* RegisterView.swift */; };
 		2E713493294A3976009C2853 /* BottomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E713492294A3976009C2853 /* BottomNavigationBarView.swift */; };
+		2E713497294B8E53009C2853 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E713496294B8E53009C2853 /* TaskModel.swift */; };
+		2E713499294B8EA9009C2853 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E713498294B8EA9009C2853 /* ListModel.swift */; };
+		2E801989294D2B7B0070D5AD /* ListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E801988294D2B7B0070D5AD /* ListData.swift */; };
 		2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E9339293EAC9800AB134A /* ToDoListApp.swift */; };
 		2E8E933E293EAC9900AB134A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E933D293EAC9900AB134A /* Assets.xcassets */; };
 		2E8E9341293EAC9900AB134A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E9340293EAC9900AB134A /* Preview Assets.xcassets */; };
+		2ED496432950A05700C19613 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED496422950A05700C19613 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E04FEE82953C27C00DE3F01 /* TaskTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTemplateView.swift; sourceTree = "<group>"; };
+		2E04FEEB2953C31000DE3F01 /* CardShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShape.swift; sourceTree = "<group>"; };
+		2E04FEED2954711500DE3F01 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		2E04FEEF2954744100DE3F01 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
+		2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarWithBackButtonView.swift; sourceTree = "<group>"; };
+		2E075C1E2951B905007F6D97 /* ListTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTemplateView.swift; sourceTree = "<group>"; };
+		2E13F0F6295389FD00267198 /* AppBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarView.swift; sourceTree = "<group>"; };
 		2E1718792948C1E500969D88 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		2E17187B2949422A00969D88 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2E17187D2949A90B00969D88 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -33,10 +51,14 @@
 		2E620615293FA141001764CE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2E620617293FA190001764CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2E713492294A3976009C2853 /* BottomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationBarView.swift; sourceTree = "<group>"; };
+		2E713496294B8E53009C2853 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		2E713498294B8EA9009C2853 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		2E801988294D2B7B0070D5AD /* ListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListData.swift; sourceTree = "<group>"; };
 		2E8E9336293EAC9800AB134A /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8E9339293EAC9800AB134A /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		2E8E933D293EAC9900AB134A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E8E9340293EAC9900AB134A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2ED496422950A05700C19613 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E04FEEA2953C2EB00DE3F01 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2E04FEEB2953C31000DE3F01 /* CardShape.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		2E1718772948BDB900969D88 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +100,8 @@
 		2E62061D293FC836001764CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E713496294B8E53009C2853 /* TaskModel.swift */,
+				2E713498294B8EA9009C2853 /* ListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -80,6 +112,7 @@
 				2E552416294255C600715359 /* HomeView.swift */,
 				2E552418294255D000715359 /* ListView.swift */,
 				2E55241A294255D800715359 /* ProfileView.swift */,
+				2E04FEED2954711500DE3F01 /* TaskView.swift */,
 			);
 			path = "Screen Views";
 			sourceTree = "<group>";
@@ -88,8 +121,22 @@
 			isa = PBXGroup;
 			children = (
 				2E713492294A3976009C2853 /* BottomNavigationBarView.swift */,
+				2ED496422950A05700C19613 /* ButtonView.swift */,
+				2E075C1E2951B905007F6D97 /* ListTemplateView.swift */,
+				2E13F0F6295389FD00267198 /* AppBarView.swift */,
+				2E04FEE82953C27C00DE3F01 /* TaskTemplateView.swift */,
+				2E04FEEF2954744100DE3F01 /* TaskItemView.swift */,
+				2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		2E801987294D2B0E0070D5AD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2E801988294D2B7B0070D5AD /* ListData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		2E8E932D293EAC9800AB134A = {
@@ -111,6 +158,8 @@
 		2E8E9338293EAC9800AB134A /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				2E04FEEA2953C2EB00DE3F01 /* Utilities */,
+				2E801987294D2B0E0070D5AD /* Data */,
 				2E1718782948BDCB00969D88 /* ViewModels */,
 				2E1718772948BDB900969D88 /* Services */,
 				2E62061D293FC836001764CE /* Models */,
@@ -221,16 +270,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E713493294A3976009C2853 /* BottomNavigationBarView.swift in Sources */,
+				2E04FEF22954945E00DE3F01 /* AppBarWithBackButtonView.swift in Sources */,
+				2E801989294D2B7B0070D5AD /* ListData.swift in Sources */,
+				2ED496432950A05700C19613 /* ButtonView.swift in Sources */,
+				2E04FEF02954744100DE3F01 /* TaskItemView.swift in Sources */,
+				2E04FEEE2954711500DE3F01 /* TaskView.swift in Sources */,
 				2E552417294255C600715359 /* HomeView.swift in Sources */,
+				2E075C1F2951B905007F6D97 /* ListTemplateView.swift in Sources */,
 				2E552419294255D000715359 /* ListView.swift in Sources */,
 				2E552415294255B400715359 /* MainView.swift in Sources */,
 				2E620616293FA141001764CE /* LoginView.swift in Sources */,
 				2E620618293FA190001764CE /* RegisterView.swift in Sources */,
+				2E713497294B8E53009C2853 /* TaskModel.swift in Sources */,
 				2E55241B294255D800715359 /* ProfileView.swift in Sources */,
 				2E17187A2948C1E500969D88 /* APIService.swift in Sources */,
+				2E04FEEC2953C31000DE3F01 /* CardShape.swift in Sources */,
 				2E17187C2949422A00969D88 /* RegisterViewModel.swift in Sources */,
+				2E04FEE92953C27C00DE3F01 /* TaskTemplateView.swift in Sources */,
+				2E713499294B8EA9009C2853 /* ListModel.swift in Sources */,
 				2E17187E2949A90B00969D88 /* LoginViewModel.swift in Sources */,
 				2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */,
+				2E13F0F7295389FD00267198 /* AppBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

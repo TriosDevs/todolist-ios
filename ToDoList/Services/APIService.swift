@@ -142,14 +142,16 @@ class APIService {
                     return
                 }
 
+
                 print(res)
 
                 guard let token = res.content else{
+                    completion(.failure(.custom(errorMessage: "Token is not found!")))
                     
                     return
                 }
 
-
+                completion(.success("User is logged in!"))
 
             }
 

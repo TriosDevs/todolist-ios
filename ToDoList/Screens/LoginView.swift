@@ -30,7 +30,7 @@ struct LoginView: View {
                     
                     VStack(spacing: 20){
                         
-                      
+                        
                         TextField("", text: $loginModel.mail, prompt: Text("Email"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
@@ -53,21 +53,34 @@ struct LoginView: View {
 
                         }, label: {
                             Text("Login")
+
+                                .frame(width: 200)
+                                .padding(.vertical, 1)
+                                .foregroundColor(.white)
+
+
+
                         })
-                       
+                        .tint(.blue)
+                        .buttonStyle(.borderedProminent)
+                        .cornerRadius(25)
+                        
                         
                         
                     }
                 }.navigationDestination(isPresented: $loginModel.isAuthenticated){
-                    MainView()
+                    MainView().navigationBarBackButtonHidden(true)
                 }
+
+
             }
         }
     }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
+    
+    
+    struct LoginView_Previews: PreviewProvider {
+        static var previews: some View {
+            LoginView()
+        }
     }
 }

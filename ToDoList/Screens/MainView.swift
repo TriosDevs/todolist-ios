@@ -35,6 +35,7 @@ struct MainView: View {
 
 
                 }
+                
             }
             VStack{
                 Spacer()

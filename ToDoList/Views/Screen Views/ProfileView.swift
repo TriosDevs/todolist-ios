@@ -13,7 +13,7 @@ struct ProfileView: View {
             Color(red: 232/255, green: 227/255, blue: 227/255)
                 .ignoresSafeArea()
             VStack{
-                Text("This is Profile View!")
+                AppBarView(appBarTitle: "My Profile")
             }
         }
     }

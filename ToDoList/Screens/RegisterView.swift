@@ -69,12 +69,21 @@ struct RegisterView: View {
                         
                         
                         Button(action: {
-
                             registerModel.register()
-                            
+
                         }, label: {
                             Text("Register")
+
+                                .frame(width: 200)
+                                .padding(.vertical, 1)
+                                .foregroundColor(.white)
+
+
+
                         })
+                        .tint(.blue)
+                        .buttonStyle(.borderedProminent)
+                        .cornerRadius(25)
                        
                         
                         
