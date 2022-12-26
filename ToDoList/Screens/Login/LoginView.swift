@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @StateObject private var loginModel = LoginViewModel()
+    @StateObject private var userModel = AccountViewModel()
     
     
     var body: some View {
@@ -50,6 +51,7 @@ struct LoginView: View {
                         Button(action: {
 
                             loginModel.login()
+                            
 
                         }, label: {
                             Text("Login")

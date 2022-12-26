@@ -17,6 +17,8 @@
 		2E17187A2948C1E500969D88 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1718792948C1E500969D88 /* APIService.swift */; };
 		2E17187C2949422A00969D88 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17187B2949422A00969D88 /* RegisterViewModel.swift */; };
 		2E17187E2949A90B00969D88 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17187D2949A90B00969D88 /* LoginViewModel.swift */; };
+		2E42B55A295A10AC0038F5F6 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42B559295A10AC0038F5F6 /* AccountModel.swift */; };
+		2E42B55C295A13D20038F5F6 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42B55B295A13D20038F5F6 /* AccountViewModel.swift */; };
 		2E552415294255B400715359 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E552414294255B400715359 /* MainView.swift */; };
 		2E552417294255C600715359 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E552416294255C600715359 /* HomeView.swift */; };
 		2E552419294255D000715359 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E552418294255D000715359 /* ListView.swift */; };
@@ -26,7 +28,6 @@
 		2E713493294A3976009C2853 /* BottomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E713492294A3976009C2853 /* BottomNavigationBarView.swift */; };
 		2E713497294B8E53009C2853 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E713496294B8E53009C2853 /* TaskModel.swift */; };
 		2E713499294B8EA9009C2853 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E713498294B8EA9009C2853 /* ListModel.swift */; };
-		2E801989294D2B7B0070D5AD /* ListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E801988294D2B7B0070D5AD /* ListData.swift */; };
 		2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E9339293EAC9800AB134A /* ToDoListApp.swift */; };
 		2E8E933E293EAC9900AB134A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E933D293EAC9900AB134A /* Assets.xcassets */; };
 		2E8E9341293EAC9900AB134A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E9340293EAC9900AB134A /* Preview Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		2E1718792948C1E500969D88 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		2E17187B2949422A00969D88 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2E17187D2949A90B00969D88 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2E42B559295A10AC0038F5F6 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		2E42B55B295A13D20038F5F6 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		2E552414294255B400715359 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2E552416294255C600715359 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2E552418294255D000715359 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -53,7 +56,6 @@
 		2E713492294A3976009C2853 /* BottomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationBarView.swift; sourceTree = "<group>"; };
 		2E713496294B8E53009C2853 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		2E713498294B8EA9009C2853 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		2E801988294D2B7B0070D5AD /* ListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListData.swift; sourceTree = "<group>"; };
 		2E8E9336293EAC9800AB134A /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8E9339293EAC9800AB134A /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		2E8E933D293EAC9900AB134A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				2E17187B2949422A00969D88 /* RegisterViewModel.swift */,
 				2E17187D2949A90B00969D88 /* LoginViewModel.swift */,
+				2E42B55B295A13D20038F5F6 /* AccountViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -102,6 +105,7 @@
 			children = (
 				2E713496294B8E53009C2853 /* TaskModel.swift */,
 				2E713498294B8EA9009C2853 /* ListModel.swift */,
+				2E42B559295A10AC0038F5F6 /* AccountModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,14 +133,6 @@
 			path = "Custom Views";
 			sourceTree = "<group>";
 		};
-		2E801987294D2B0E0070D5AD /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				2E801988294D2B7B0070D5AD /* ListData.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		2E8E932D293EAC9800AB134A = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				2E04FEEA2953C2EB00DE3F01 /* Utilities */,
-				2E801987294D2B0E0070D5AD /* Data */,
 				2E1718782948BDCB00969D88 /* ViewModels */,
 				2E1718772948BDB900969D88 /* Services */,
 				2E62061D293FC836001764CE /* Models */,
@@ -367,7 +362,6 @@
 			files = (
 				2E713493294A3976009C2853 /* BottomNavigationBarView.swift in Sources */,
 				2E04FEF22954945E00DE3F01 /* AppBarWithBackButtonView.swift in Sources */,
-				2E801989294D2B7B0070D5AD /* ListData.swift in Sources */,
 				2E04FEF02954744100DE3F01 /* TaskItemView.swift in Sources */,
 				2E04FEEE2954711500DE3F01 /* TaskView.swift in Sources */,
 				2E552417294255C600715359 /* HomeView.swift in Sources */,
@@ -375,6 +369,8 @@
 				2E552419294255D000715359 /* ListView.swift in Sources */,
 				2E552415294255B400715359 /* MainView.swift in Sources */,
 				2E620616293FA141001764CE /* LoginView.swift in Sources */,
+				2E42B55C295A13D20038F5F6 /* AccountViewModel.swift in Sources */,
+				2E42B55A295A10AC0038F5F6 /* AccountModel.swift in Sources */,
 				2E620618293FA190001764CE /* RegisterView.swift in Sources */,
 				2E713497294B8E53009C2853 /* TaskModel.swift in Sources */,
 				2E55241B294255D800715359 /* ProfileView.swift in Sources */,

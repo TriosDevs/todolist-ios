@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    var lists: [ListModel] = listData
+   
     var body: some View {
         ZStack{
             Color(red: 232/255, green: 227/255, blue: 227/255)

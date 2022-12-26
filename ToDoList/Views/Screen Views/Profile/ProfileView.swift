@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @StateObject private var UserModel = AccountViewModel()
+
+
     var body: some View {
         ZStack{
             Color(red: 232/255, green: 227/255, blue: 227/255)
@@ -33,10 +36,12 @@ struct ProfileView: View {
                             .offset(y: -200)
                     }
                     HStack{
-                        Text("Name")
-                            .font(.system(size: 25, weight: .bold))
-                        Text("Surname")
-                            .font(.system(size: 25, weight: .bold))
+                        ForEach(UserModel.userData) { user in
+                            Text(user.firstName)
+                                .font(.system(size: 25, weight: .bold))
+                            Text(user.lastName)
+                                .font(.system(size: 25, weight: .bold))
+                        }
                     }.offset(y: -100)
 
                     ZStack{
@@ -46,6 +51,7 @@ struct ProfileView: View {
                         Text("Email")
                             .foregroundColor(.white)
                             .font(.system(size: 15, weight: .bold))
+
                     }.offset(x: -105)
 
                     ZStack{
@@ -73,6 +79,8 @@ struct ProfileView: View {
                 }
                 Spacer()
             }
+        }.onAppear{
+            UserModel.getUser()
         }
     }
 }

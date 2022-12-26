@@ -12,7 +12,7 @@ struct ListView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
 
-    var lists: [ListModel] = listData
+    
 
 
     var body: some View {
@@ -22,27 +22,18 @@ struct ListView: View {
                     .ignoresSafeArea()
 
 
-                VStack(spacing: 30){
+                VStack(){
                     AppBarView(appBarTitle: "My Lists")
 
 
 
                     ScrollView{
-                        ForEach(lists) { list in
 
-                            NavigationLink(destination: TaskView()) {
-                                ListTemplateView(listName: list.name, taskCount: 5)
-                                    
-                                    .padding(.vertical, 16)
-
-
-
-                            }
                                 
 
 
                         }
-                    }
+                    
 
                     Button(action: {
                         print("Round Action")

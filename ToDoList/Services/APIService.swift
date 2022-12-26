@@ -21,6 +21,7 @@ enum NetworkError: Error {
     case invalidURL
     case noData
     case decodingError
+    case custom(errorMessage: String)
 
 }
 
@@ -59,6 +60,7 @@ class APIService {
 
     var registerUrl = "http://todolist-api.oguzhanercelik.dev/auth"
     var loginUrl = "http://todolist-api.oguzhanercelik.dev/auth/login"
+    var getUserUrl = "http://todolist-api.oguzhanercelik.dev/api/user"
 
 
     func register(name: String, surname: String, mail: String, password: String, completion: @escaping (Result<String, NetworkError>) -> Void){
@@ -143,7 +145,7 @@ class APIService {
                 }
 
 
-                print(res)
+
 
                 guard let token = res.content else{
                     completion(.failure(.custom(errorMessage: "Token is not found!")))
@@ -151,7 +153,7 @@ class APIService {
                     return
                 }
 
-                completion(.success("User is logged in!"))
+                completion(.success(token))
 
             }
 
@@ -159,7 +161,61 @@ class APIService {
 
         }.resume()
 
+
+
+
+
+
+
+
+
+
+        
+
     }
+
+
+    func getUser(token: String, completion: @escaping (Result<AccountModel, NetworkError>) -> Void){
+        var accountData: [AccountModel] = []
+        guard let url = URL(string: getUserUrl) else {
+
+            completion(.failure(.invalidURL))
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+
+        URLSession.shared.dataTask(with: request) {data, res, err in
+
+            guard let data = data, err == nil else {
+                completion(.failure(.custom(errorMessage: "No account!")))
+                return
+            }
+           
+
+            do {
+                 let res = try JSONDecoder().decode(AccountModel.self, from: data)
+
+
+
+                print(res)
+                completion(.success(res))
+            } catch(let err){
+                print(err)
+            }
+
+
+
+        }.resume()
+
+
+
+
+    }
+
+
 
     
 }
