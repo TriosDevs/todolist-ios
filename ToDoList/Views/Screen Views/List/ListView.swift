@@ -11,6 +11,8 @@ struct ListView: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
+    @StateObject private var listObject = ListViewModel()
+
 
     
 
@@ -29,7 +31,12 @@ struct ListView: View {
 
                     ScrollView{
 
-                                
+                        ForEach(listObject.listData) {list in
+
+                            VStack(spacing: 16.0) {
+                                ListTemplateView(listName: list.name!, taskCount: 5)
+                            }
+                        }
 
 
                         }
@@ -49,6 +56,8 @@ struct ListView: View {
 
                 }
             }
+        }.onAppear{
+            listObject.getList()
         }
     }
 }

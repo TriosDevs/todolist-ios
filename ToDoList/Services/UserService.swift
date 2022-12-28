@@ -1,40 +1,16 @@
 //
-//  APIService.swift
+//  UserService.swift
 //  ToDoList
 //
-//  Created by Ardi Jorganxhi on 13.12.22.
+//  Created by Ardi Jorganxhi on 27.12.22.
 //
 
 import Foundation
 
 
+class UserService {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class APIService {
-
-    var registerUrl = "http://todolist-api.oguzhanercelik.dev/auth"
-    var loginUrl = "http://todolist-api.oguzhanercelik.dev/auth/login"
     var getUserUrl = "http://todolist-api.oguzhanercelik.dev/api/user"
-
-
-   
-
-        
-    
-
 
 
 
@@ -56,7 +32,7 @@ class APIService {
                 completion(.failure(.custom(errorMessage: "No account!")))
                 return
             }
-           
+
 
             do {
                  let res = try JSONDecoder().decode(AccountModel.self, from: data)
@@ -77,9 +53,4 @@ class APIService {
 
 
     }
-
-
-
-    
 }
-

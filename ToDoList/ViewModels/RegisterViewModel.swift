@@ -20,7 +20,7 @@ class RegisterViewModel: ObservableObject {
 
     func register(){
 
-        APIService().register(name: name, surname: surname, mail: mail, password: password) {result in
+        RegisterService().register(name: name, surname: surname, mail: mail, password: password) {result in
 
             switch result {
             case .success(_):

@@ -10,8 +10,9 @@ import Foundation
 
 
 struct ListModel: Decodable, Identifiable {
-    var identifyId = UUID()
-    var id: Int
-    var name: String
-    var task: [TaskModel]
+
+    var id: Int?
+    var name: String?
+    
+
 }

@@ -10,7 +10,6 @@ import SwiftUI
 struct LoginView: View {
     
     @StateObject private var loginModel = LoginViewModel()
-    @StateObject private var userModel = AccountViewModel()
     
     
     var body: some View {

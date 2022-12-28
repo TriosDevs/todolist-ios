@@ -20,7 +20,7 @@ class LoginViewModel: ObservableObject {
 
         let defaults = UserDefaults.standard
 
-        APIService().login(mail: mail, password: password) { result in
+        LoginService().login(mail: mail, password: password) { result in
             switch result {
 
             case .success(let token):

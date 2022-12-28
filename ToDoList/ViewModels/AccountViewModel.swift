@@ -13,8 +13,6 @@ class AccountViewModel: ObservableObject {
 
     @Published var userData = [AccountModel]()
 
-    var firstName: String = ""
-    var lastName: String = ""
 
 
 
@@ -24,14 +22,13 @@ class AccountViewModel: ObservableObject {
             return
         }
 
-        APIService().getUser(token: token) { result in
+        UserService().getUser(token: token) { result in
 
             switch result {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.userData = [user]
-                    self.firstName = user.firstName
-                    self.lastName = user.lastName
+               
                 }
             case .failure(let error):
                 print(error)
