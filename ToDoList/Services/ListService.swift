@@ -74,7 +74,7 @@ class ListService {
 
             }
 
-            guard let res = try? JSONDecoder().decode(CreateListResponse.self, from: data) else {
+            guard let res = try? JSONDecoder().decode(MessageResponse.self, from: data) else {
                 completion(.failure(.decodingError))
                 return
             }

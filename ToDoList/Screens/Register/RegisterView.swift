@@ -11,7 +11,7 @@ struct RegisterView: View {
 
 
 
-    @StateObject private var registerModel = RegisterViewModel()
+    @StateObject private var userObject = UserViewModel()
         
         
         
@@ -35,7 +35,7 @@ struct RegisterView: View {
                     VStack(spacing: 20){
                         
                         
-                        TextField("", text: $registerModel.name, prompt: Text("Name"))
+                        TextField("", text: $userObject.name, prompt: Text("Name"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                         
@@ -45,21 +45,21 @@ struct RegisterView: View {
                         
                         
                         
-                        TextField("", text: $registerModel.surname, prompt: Text("Surname"))
-                            .textFieldStyle(.roundedBorder)
-                            .frame(width: 300)
-                            .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1))
-                            .cornerRadius(15.0)
-                            .disableAutocorrection(true)
-                            .autocapitalization(.none)
-                        TextField("", text: $registerModel.mail, prompt: Text("Email"))
+                        TextField("", text: $userObject.surname, prompt: Text("Surname"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                             .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1))
                             .cornerRadius(15.0)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
-                        SecureField("", text: $registerModel.password, prompt: Text("Password"))
+                        TextField("", text: $userObject.mail, prompt: Text("Email"))
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 300)
+                            .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1))
+                            .cornerRadius(15.0)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                        SecureField("", text: $userObject.password, prompt: Text("Password"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                             .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1), width: 100)
@@ -69,7 +69,7 @@ struct RegisterView: View {
                         
                         
                         Button(action: {
-                            registerModel.register()
+                            userObject.register()
 
                         }, label: {
                             Text("Register")
@@ -88,7 +88,7 @@ struct RegisterView: View {
                         
                         
                     }
-                }.navigationDestination(isPresented: $registerModel.isRegistered){
+                }.navigationDestination(isPresented: $userObject.isRegistered){
                     LoginView()
                 }
                 .navigationBarBackButtonHidden()

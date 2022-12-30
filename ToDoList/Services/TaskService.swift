@@ -40,7 +40,7 @@ class TaskService {
                 return
             }
 
-            let res = try? JSONDecoder().decode(CreateTaskResponse.self, from: data)
+            let res = try? JSONDecoder().decode(MessageResponse.self, from: data)
 
             print(res)
 
@@ -52,4 +52,7 @@ class TaskService {
 
         
     }
+
+    
+
 }

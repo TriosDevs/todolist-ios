@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject private var loginModel = LoginViewModel()
+    @StateObject private var userObject = UserViewModel()
     
     
     var body: some View {
@@ -31,14 +31,14 @@ struct LoginView: View {
                     VStack(spacing: 20){
                         
                         
-                        TextField("", text: $loginModel.mail, prompt: Text("Email"))
+                        TextField("", text: $userObject.mail, prompt: Text("Email"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                             .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1))
                             .cornerRadius(15.0)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
-                        SecureField("", text: $loginModel.password, prompt: Text("Password"))
+                        SecureField("", text: $userObject.password, prompt: Text("Password"))
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 300)
                             .border(Color(red: 88.0, green: 124.0, blue: 247.0, opacity: 1), width: 100)
@@ -49,7 +49,7 @@ struct LoginView: View {
                         
                         Button(action: {
 
-                            loginModel.login()
+                            userObject.login()
                             
 
                         }, label: {
@@ -69,7 +69,7 @@ struct LoginView: View {
                         
                         
                     }
-                }.navigationDestination(isPresented: $loginModel.isAuthenticated){
+                }.navigationDestination(isPresented: $userObject.isAuthenticated){
                     MainView().navigationBarBackButtonHidden(true)
                 }
 
