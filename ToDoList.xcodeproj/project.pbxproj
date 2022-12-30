@@ -14,9 +14,10 @@
 		2E04FEF22954945E00DE3F01 /* AppBarWithBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */; };
 		2E075C1F2951B905007F6D97 /* ListTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E075C1E2951B905007F6D97 /* ListTemplateView.swift */; };
 		2E13F0F7295389FD00267198 /* AppBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13F0F6295389FD00267198 /* AppBarView.swift */; };
-		2E17187A2948C1E500969D88 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1718792948C1E500969D88 /* APIService.swift */; };
 		2E17187C2949422A00969D88 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17187B2949422A00969D88 /* RegisterViewModel.swift */; };
 		2E17187E2949A90B00969D88 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17187D2949A90B00969D88 /* LoginViewModel.swift */; };
+		2E1F4FC6295F43F6001D6FD2 /* CreateTaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F4FC5295F43F6001D6FD2 /* CreateTaskResponse.swift */; };
+		2E1F4FC8295F4565001D6FD2 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F4FC7295F4565001D6FD2 /* TaskViewModel.swift */; };
 		2E40D8AB295B85A00050BC04 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E40D8AA295B85A00050BC04 /* RegisterService.swift */; };
 		2E40D8AD295B85AF0050BC04 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E40D8AC295B85AF0050BC04 /* LoginService.swift */; };
 		2E40D8AF295B85C10050BC04 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E40D8AE295B85C10050BC04 /* UserService.swift */; };
@@ -36,6 +37,8 @@
 		2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E9339293EAC9800AB134A /* ToDoListApp.swift */; };
 		2E8E933E293EAC9900AB134A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E933D293EAC9900AB134A /* Assets.xcassets */; };
 		2E8E9341293EAC9900AB134A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E9340293EAC9900AB134A /* Preview Assets.xcassets */; };
+		2EA49FA1295E2A2700096545 /* CreateTaskModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA49FA0295E2A2700096545 /* CreateTaskModalView.swift */; };
+		2EA49FA3295EFE2B00096545 /* CreateListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA49FA2295EFE2B00096545 /* CreateListResponse.swift */; };
 		2EE21B6C295C7F630099657B /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE21B6B295C7F630099657B /* AuthenticationError.swift */; };
 		2EE21B6E295C7F880099657B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE21B6D295C7F880099657B /* NetworkError.swift */; };
 		2EE21B70295C7FB50099657B /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE21B6F295C7FB50099657B /* RegisterModel.swift */; };
@@ -44,7 +47,8 @@
 		2EE21B77295C803F0099657B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE21B76295C803F0099657B /* LoginResponse.swift */; };
 		2EE21B79295C85C90099657B /* GetListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE21B78295C85C90099657B /* GetListResponse.swift */; };
 		2EE21B7B295C89D10099657B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE21B7A295C89D10099657B /* ListViewModel.swift */; };
-		2EFB2F872954A90C00CC0EEE /* CreateListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB2F862954A90C00CC0EEE /* CreateListPopupView.swift */; };
+		2EE21B7D295E087D0099657B /* ModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE21B7C295E087D0099657B /* ModalViewModel.swift */; };
+		2EFB2F872954A90C00CC0EEE /* CreateListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB2F862954A90C00CC0EEE /* CreateListModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +59,10 @@
 		2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarWithBackButtonView.swift; sourceTree = "<group>"; };
 		2E075C1E2951B905007F6D97 /* ListTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTemplateView.swift; sourceTree = "<group>"; };
 		2E13F0F6295389FD00267198 /* AppBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarView.swift; sourceTree = "<group>"; };
-		2E1718792948C1E500969D88 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		2E17187B2949422A00969D88 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2E17187D2949A90B00969D88 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2E1F4FC5295F43F6001D6FD2 /* CreateTaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskResponse.swift; sourceTree = "<group>"; };
+		2E1F4FC7295F4565001D6FD2 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		2E40D8AA295B85A00050BC04 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		2E40D8AC295B85AF0050BC04 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		2E40D8AE295B85C10050BC04 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -78,6 +83,8 @@
 		2E8E9339293EAC9800AB134A /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		2E8E933D293EAC9900AB134A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E8E9340293EAC9900AB134A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2EA49FA0295E2A2700096545 /* CreateTaskModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskModalView.swift; sourceTree = "<group>"; };
+		2EA49FA2295EFE2B00096545 /* CreateListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListResponse.swift; sourceTree = "<group>"; };
 		2EE21B6B295C7F630099657B /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		2EE21B6D295C7F880099657B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2EE21B6F295C7FB50099657B /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
@@ -86,7 +93,8 @@
 		2EE21B76295C803F0099657B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2EE21B78295C85C90099657B /* GetListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListResponse.swift; sourceTree = "<group>"; };
 		2EE21B7A295C89D10099657B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		2EFB2F862954A90C00CC0EEE /* CreateListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListPopupView.swift; sourceTree = "<group>"; };
+		2EE21B7C295E087D0099657B /* ModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewModel.swift; sourceTree = "<group>"; };
+		2EFB2F862954A90C00CC0EEE /* CreateListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +119,6 @@
 		2E1718772948BDB900969D88 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2E1718792948C1E500969D88 /* APIService.swift */,
 				2E40D8AA295B85A00050BC04 /* RegisterService.swift */,
 				2E40D8AC295B85AF0050BC04 /* LoginService.swift */,
 				2E40D8AE295B85C10050BC04 /* UserService.swift */,
@@ -128,6 +135,8 @@
 				2E17187D2949A90B00969D88 /* LoginViewModel.swift */,
 				2E42B55B295A13D20038F5F6 /* AccountViewModel.swift */,
 				2EE21B7A295C89D10099657B /* ListViewModel.swift */,
+				2EE21B7C295E087D0099657B /* ModalViewModel.swift */,
+				2E1F4FC7295F4565001D6FD2 /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -167,7 +176,7 @@
 		2E713495294A690A009C2853 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				2EFB2F852954A85200CC0EEE /* Popup */,
+				2EFB2F852954A85200CC0EEE /* Modal */,
 				2EFB2F812954A7F400CC0EEE /* BottomNavigationBar */,
 				2EFB2F822954A80500CC0EEE /* List */,
 				2EFB2F832954A81200CC0EEE /* AppBar */,
@@ -243,6 +252,8 @@
 				2EE21B74295C80190099657B /* RegisterResponse.swift */,
 				2EE21B76295C803F0099657B /* LoginResponse.swift */,
 				2EE21B78295C85C90099657B /* GetListResponse.swift */,
+				2EA49FA2295EFE2B00096545 /* CreateListResponse.swift */,
+				2E1F4FC5295F43F6001D6FD2 /* CreateTaskResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -281,12 +292,13 @@
 			path = Task;
 			sourceTree = "<group>";
 		};
-		2EFB2F852954A85200CC0EEE /* Popup */ = {
+		2EFB2F852954A85200CC0EEE /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				2EFB2F862954A90C00CC0EEE /* CreateListPopupView.swift */,
+				2EFB2F862954A90C00CC0EEE /* CreateListModalView.swift */,
+				2EA49FA0295E2A2700096545 /* CreateTaskModalView.swift */,
 			);
-			path = Popup;
+			path = Modal;
 			sourceTree = "<group>";
 		};
 		2EFB2F882954B8AB00CC0EEE /* Home */ = {
@@ -419,13 +431,16 @@
 				2E713493294A3976009C2853 /* BottomNavigationBarView.swift in Sources */,
 				2E04FEF22954945E00DE3F01 /* AppBarWithBackButtonView.swift in Sources */,
 				2E04FEF02954744100DE3F01 /* TaskItemView.swift in Sources */,
+				2EA49FA1295E2A2700096545 /* CreateTaskModalView.swift in Sources */,
 				2E04FEEE2954711500DE3F01 /* TaskView.swift in Sources */,
 				2E552417294255C600715359 /* HomeView.swift in Sources */,
 				2E075C1F2951B905007F6D97 /* ListTemplateView.swift in Sources */,
 				2E40D8AF295B85C10050BC04 /* UserService.swift in Sources */,
+				2EE21B7D295E087D0099657B /* ModalViewModel.swift in Sources */,
 				2E40D8AB295B85A00050BC04 /* RegisterService.swift in Sources */,
 				2EE21B6E295C7F880099657B /* NetworkError.swift in Sources */,
 				2E552419294255D000715359 /* ListView.swift in Sources */,
+				2E1F4FC8295F4565001D6FD2 /* TaskViewModel.swift in Sources */,
 				2E552415294255B400715359 /* MainView.swift in Sources */,
 				2EE21B75295C80190099657B /* RegisterResponse.swift in Sources */,
 				2E620616293FA141001764CE /* LoginView.swift in Sources */,
@@ -435,21 +450,22 @@
 				2E620618293FA190001764CE /* RegisterView.swift in Sources */,
 				2E713497294B8E53009C2853 /* TaskModel.swift in Sources */,
 				2E55241B294255D800715359 /* ProfileView.swift in Sources */,
-				2E17187A2948C1E500969D88 /* APIService.swift in Sources */,
 				2E04FEEC2953C31000DE3F01 /* CardShape.swift in Sources */,
 				2E40D8B1295B85CA0050BC04 /* ListService.swift in Sources */,
+				2EA49FA3295EFE2B00096545 /* CreateListResponse.swift in Sources */,
 				2EE21B72295C7FEB0099657B /* LoginModel.swift in Sources */,
 				2E17187C2949422A00969D88 /* RegisterViewModel.swift in Sources */,
 				2E04FEE92953C27C00DE3F01 /* TaskTemplateView.swift in Sources */,
 				2EE21B79295C85C90099657B /* GetListResponse.swift in Sources */,
 				2E713499294B8EA9009C2853 /* ListModel.swift in Sources */,
 				2E17187E2949A90B00969D88 /* LoginViewModel.swift in Sources */,
-				2EFB2F872954A90C00CC0EEE /* CreateListPopupView.swift in Sources */,
+				2EFB2F872954A90C00CC0EEE /* CreateListModalView.swift in Sources */,
 				2E40D8B3295B85D50050BC04 /* TaskService.swift in Sources */,
 				2E40D8AD295B85AF0050BC04 /* LoginService.swift in Sources */,
 				2E8E933A293EAC9800AB134A /* ToDoListApp.swift in Sources */,
 				2E13F0F7295389FD00267198 /* AppBarView.swift in Sources */,
 				2EE21B77295C803F0099657B /* LoginResponse.swift in Sources */,
+				2E1F4FC6295F43F6001D6FD2 /* CreateTaskResponse.swift in Sources */,
 				2EE21B70295C7FB50099657B /* RegisterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

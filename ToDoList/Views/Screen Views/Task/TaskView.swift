@@ -9,6 +9,17 @@ import SwiftUI
 
 struct TaskView: View {
 
+    @StateObject private var modalObject = ModalViewModel()
+
+    @StateObject var taskObject = TaskViewModel(listId: "0")
+    @State var listId: String
+
+
+
+
+
+
+
 
     var body: some View {
 
@@ -38,7 +49,7 @@ struct TaskView: View {
                                 .frame(width: 20, height: 20)
                                 .offset(x: -140, y: -220)
                                 .foregroundColor(.white)
-                            Text("My List")
+                            Text(taskObject.name)
                                 .foregroundColor(.white)
                                 .font(.title2)
                                 .offset(x: 80, y: -220)
@@ -63,8 +74,22 @@ struct TaskView: View {
 
                         }
 
+
+
                     }
                     Spacer()
+                    HStack{
+                        Text(Image(systemName: "plus"))
+                            .font(.system(size: 30))
+                            .frame(width: 70, height: 70)
+                            .foregroundColor(Color.white)
+                            .background(Color(red: 88/255, green: 124/255, blue: 247/255))
+                            .clipShape(Circle())
+                            .offset(x: 130, y: -75)
+                            .onTapGesture {
+                                modalObject.setTrue()
+                            }
+                    }
                 } 
 
 
@@ -73,6 +98,9 @@ struct TaskView: View {
 
 
 
+            }.sheet(isPresented: $modalObject.isPresented){
+                CreateTaskModalView(taskObject: TaskViewModel(listId: listId))
+                    .presentationDetents([.height(200)])
             }
         }
     }
@@ -81,7 +109,7 @@ struct TaskView: View {
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView()
+        TaskView(listId: "0")
 
     }
 }
