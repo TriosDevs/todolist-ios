@@ -14,6 +14,12 @@
 		2E04FEF22954945E00DE3F01 /* AppBarWithBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */; };
 		2E075C1F2951B905007F6D97 /* ListTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E075C1E2951B905007F6D97 /* ListTemplateView.swift */; };
 		2E13F0F7295389FD00267198 /* AppBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13F0F6295389FD00267198 /* AppBarView.swift */; };
+		2E181888296354D000117A1D /* UpdateUserModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E181887296354D000117A1D /* UpdateUserModalView.swift */; };
+		2E18188A29635BD500117A1D /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18188929635BD500117A1D /* OnBoardingView.swift */; };
+		2E18188C296372EA00117A1D /* ListUpdateDeleteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18188B296372EA00117A1D /* ListUpdateDeleteModalView.swift */; };
+		2E18188E296392D800117A1D /* TaskUpdateDeleteModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18188D296392D800117A1D /* TaskUpdateDeleteModalView.swift */; };
+		2E1818902963930000117A1D /* UpdateListModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18188F2963930000117A1D /* UpdateListModalView.swift */; };
+		2E1818922963939F00117A1D /* UpdateTaskModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1818912963939F00117A1D /* UpdateTaskModalView.swift */; };
 		2E1F4FC8295F4565001D6FD2 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F4FC7295F4565001D6FD2 /* TaskViewModel.swift */; };
 		2E1F4FCA295F9C9C001D6FD2 /* MessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F4FC9295F9C9C001D6FD2 /* MessageResponse.swift */; };
 		2E40D8AF295B85C10050BC04 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E40D8AE295B85C10050BC04 /* UserService.swift */; };
@@ -54,6 +60,12 @@
 		2E04FEF12954945E00DE3F01 /* AppBarWithBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarWithBackButtonView.swift; sourceTree = "<group>"; };
 		2E075C1E2951B905007F6D97 /* ListTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTemplateView.swift; sourceTree = "<group>"; };
 		2E13F0F6295389FD00267198 /* AppBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarView.swift; sourceTree = "<group>"; };
+		2E181887296354D000117A1D /* UpdateUserModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserModalView.swift; sourceTree = "<group>"; };
+		2E18188929635BD500117A1D /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		2E18188B296372EA00117A1D /* ListUpdateDeleteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUpdateDeleteModalView.swift; sourceTree = "<group>"; };
+		2E18188D296392D800117A1D /* TaskUpdateDeleteModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUpdateDeleteModalView.swift; sourceTree = "<group>"; };
+		2E18188F2963930000117A1D /* UpdateListModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateListModalView.swift; sourceTree = "<group>"; };
+		2E1818912963939F00117A1D /* UpdateTaskModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTaskModalView.swift; sourceTree = "<group>"; };
 		2E1F4FC7295F4565001D6FD2 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		2E1F4FC9295F9C9C001D6FD2 /* MessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageResponse.swift; sourceTree = "<group>"; };
 		2E40D8AE295B85C10050BC04 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -219,6 +231,7 @@
 				2EFB2F8C2954B8DB00CC0EEE /* Login */,
 				2EFB2F8D2954B8E200CC0EEE /* Register */,
 				2EFB2F8E2954B8E800CC0EEE /* Main */,
+				2E18188929635BD500117A1D /* OnBoardingView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -282,6 +295,11 @@
 			children = (
 				2EFB2F862954A90C00CC0EEE /* CreateListModalView.swift */,
 				2EA49FA0295E2A2700096545 /* CreateTaskModalView.swift */,
+				2E181887296354D000117A1D /* UpdateUserModalView.swift */,
+				2E18188B296372EA00117A1D /* ListUpdateDeleteModalView.swift */,
+				2E18188D296392D800117A1D /* TaskUpdateDeleteModalView.swift */,
+				2E18188F2963930000117A1D /* UpdateListModalView.swift */,
+				2E1818912963939F00117A1D /* UpdateTaskModalView.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -424,20 +442,26 @@
 				2E40D8AF295B85C10050BC04 /* UserService.swift in Sources */,
 				2EE21B7D295E087D0099657B /* ModalViewModel.swift in Sources */,
 				2EE21B6E295C7F880099657B /* NetworkError.swift in Sources */,
+				2E1818922963939F00117A1D /* UpdateTaskModalView.swift in Sources */,
 				2E552419294255D000715359 /* ListView.swift in Sources */,
 				2E1F4FC8295F4565001D6FD2 /* TaskViewModel.swift in Sources */,
 				2E552415294255B400715359 /* MainView.swift in Sources */,
 				2EE21B75295C80190099657B /* RegisterResponse.swift in Sources */,
 				2E620616293FA141001764CE /* LoginView.swift in Sources */,
+				2E18188A29635BD500117A1D /* OnBoardingView.swift in Sources */,
 				2EE21B7B295C89D10099657B /* ListViewModel.swift in Sources */,
 				2E42B55C295A13D20038F5F6 /* UserViewModel.swift in Sources */,
+				2E18188C296372EA00117A1D /* ListUpdateDeleteModalView.swift in Sources */,
 				2E42B55A295A10AC0038F5F6 /* AccountModel.swift in Sources */,
 				2E620618293FA190001764CE /* RegisterView.swift in Sources */,
 				2E713497294B8E53009C2853 /* TaskModel.swift in Sources */,
 				2E55241B294255D800715359 /* ProfileView.swift in Sources */,
 				2E04FEEC2953C31000DE3F01 /* CardShape.swift in Sources */,
 				2E40D8B1295B85CA0050BC04 /* ListService.swift in Sources */,
+				2E1818902963930000117A1D /* UpdateListModalView.swift in Sources */,
 				2EE21B72295C7FEB0099657B /* LoginModel.swift in Sources */,
+				2E18188E296392D800117A1D /* TaskUpdateDeleteModalView.swift in Sources */,
+				2E181888296354D000117A1D /* UpdateUserModalView.swift in Sources */,
 				2E04FEE92953C27C00DE3F01 /* TaskTemplateView.swift in Sources */,
 				2EE21B79295C85C90099657B /* GetListResponse.swift in Sources */,
 				2E713499294B8EA9009C2853 /* ListModel.swift in Sources */,

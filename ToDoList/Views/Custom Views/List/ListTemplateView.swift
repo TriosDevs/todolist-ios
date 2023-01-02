@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct ListTemplateView: View {
-
+    @StateObject var modalObject = ModalViewModel()
     @State var listName: String
     @State var taskCount: Int
     var body: some View {

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CreateListModalView: View {
 
+    @Environment(\.presentationMode) var presentationMode
 
-
-    @StateObject var listObject = ListViewModel()
+    @StateObject var listObject = ListViewModel(listId: "0")
 
     var body: some View {
 
@@ -28,7 +28,7 @@ struct CreateListModalView: View {
                 HStack(spacing: 20.0){
 
                     Button(action: {
-
+                        presentationMode.wrappedValue.dismiss()
                         listObject.createList()
 
 
@@ -52,7 +52,7 @@ struct CreateListModalView: View {
 
                     Button(action: {
 
-
+                        presentationMode.wrappedValue.dismiss()
 
 
                     }, label: {

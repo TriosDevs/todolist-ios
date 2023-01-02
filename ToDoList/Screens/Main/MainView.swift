@@ -11,6 +11,7 @@ struct MainView: View {
     
     
     @State private var tabSelection: Tab = .house
+    @EnvironmentObject private var userObject: UserViewModel
 
     init(){
         UITabBar.appearance().isHidden = true

@@ -11,7 +11,7 @@ struct ListView: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-    @StateObject private var listObject = ListViewModel()
+    @StateObject private var listObject = ListViewModel(listId: "0")
     @StateObject private var modalObject = ModalViewModel()
     @State var isPresented = false
 
@@ -22,38 +22,55 @@ struct ListView: View {
     var body: some View {
         NavigationStack {
             ZStack{
-
+                
                 Color(red: 232/255, green: 227/255, blue: 227/255)
                     .ignoresSafeArea()
                     .onTapGesture {
                         self.isPresented = false
                     }
-
                 
-
-
+                
+                
+                
                 VStack(){
                     AppBarView(appBarTitle: "My Lists")
-
-
-
-
-
+                    
+                    
+                    
+                    
+                    
                     ScrollView {
                         ForEach(listObject.listData) {list in
-
                             
-                            NavigationLink(destination: TaskView(listId: String(list.id!))) {
-
-                                ListTemplateView(listName: list.name!, taskCount: 5)
-                            }
-
-
-
+                            
+                            
+                            ListTemplateView(listName: list.name!, taskCount: 5)
+                                .navigationDestination(isPresented: $listObject.navigateTask){
+                                    TaskView(listId: String(list.id!))
+                                }
+                                .sheet(isPresented: $modalObject.isPresented2, content: {
+                                    ListUpdateDeleteModalView(listObject: ListViewModel(listId: String(list.id!)))
+                                        .environmentObject(modalObject)
+                                        .presentationDetents([.height(300)])
+                                    
+                                    
+                                })
+                                .onTapGesture {
+                                    listObject.goToTask()
+                                }
+                                .onLongPressGesture{
+                                    modalObject.setTrue2()
+                                }
+                            
+                            
+                            
+                            
+                            
+                            
                         }
                     }
-
-                        
+                    
+                    
                     HStack{
                         Text(Image(systemName: "plus"))
                             .font(.system(size: 30))
@@ -66,21 +83,21 @@ struct ListView: View {
                                 modalObject.setTrue()
                             }
                     }
-
-
                     
-
-
-
-
                     
-
-
-
-
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 }
-               
-
+                
+                
             }.onAppear{
                 listObject.getList()
             }
@@ -88,9 +105,11 @@ struct ListView: View {
                 CreateListModalView()
                     .presentationDetents([.height(200)])
             })
-
+            
+            
+            
         }
-
+    
     }
 
     struct ListView_Previews: PreviewProvider {

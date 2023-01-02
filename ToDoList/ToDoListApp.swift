@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ToDoListApp: App {
+    @StateObject var userObject = UserViewModel()
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            NavigationView{
+                OnBoardingView()
+                    .environmentObject(userObject)
+            }.navigationViewStyle(.stack)
+            
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject private var userObject = UserViewModel()
+    @EnvironmentObject private var userObject: UserViewModel
     
     
     var body: some View {
@@ -70,7 +70,8 @@ struct LoginView: View {
                         
                     }
                 }.navigationDestination(isPresented: $userObject.isAuthenticated){
-                    MainView().navigationBarBackButtonHidden(true)
+                    MainView()
+                        .navigationBarBackButtonHidden(true)
                 }
 
 

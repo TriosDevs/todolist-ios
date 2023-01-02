@@ -14,7 +14,22 @@ class ListViewModel: ObservableObject {
 
     @Published var listData = [ListModel]()
     @Published var isCreated: Bool = false
-    @Published var listId: Int?
+    @Published var listId: String?
+
+    @Published var navigateTask: Bool = false
+
+    init(listId: String){
+        self.listId = listId
+    }
+
+
+
+    func goToTask(){
+
+        DispatchQueue.main.async {
+            self.navigateTask = true
+        }
+    }
 
    
     
@@ -65,6 +80,37 @@ class ListViewModel: ObservableObject {
                 print(err.localizedDescription)
             }
 
+        }
+    }
+
+    func updateList(){
+        let defaults = UserDefaults.standard
+        guard let token = defaults.string(forKey: "jwttoken") else {
+            return
+        }
+        ListService().updateList(name: name, token: token, listId: listId!) {result in
+            switch result {
+            case .success(_):
+                print("List is updated!")
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+
+    }
+
+    func deleteList(){
+        let defaults = UserDefaults.standard
+        guard let token = defaults.string(forKey: "jwttoken") else {
+            return
+        }
+        ListService().deleteList(token: token, listId: listId!) { result in
+            switch result {
+            case .success(_):
+                print("List is deleted!")
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
         }
     }
 }

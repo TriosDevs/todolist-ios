@@ -11,6 +11,7 @@ import Foundation
 class ModalViewModel: ObservableObject {
 
     @Published var isPresented: Bool = false
+    @Published var isPresented2: Bool = false
 
 
     func setTrue(){
@@ -19,5 +20,17 @@ class ModalViewModel: ObservableObject {
             self.isPresented = true
         }
 
+    }
+
+    func setTrue2(){
+        DispatchQueue.main.async {
+            self.isPresented2 = true
+        }
+    }
+
+    func setFalse(){
+        DispatchQueue.main.async {
+            self.isPresented = false
+        }
     }
 }

@@ -7,9 +7,9 @@
 
 import Foundation
 
-
+@MainActor
 class UserViewModel: ObservableObject {
-
+    
     var name: String = ""
     var surname: String = ""
     var mail: String = ""
@@ -17,6 +17,8 @@ class UserViewModel: ObservableObject {
     @Published var userData = [AccountModel]()
     @Published var isAuthenticated: Bool = false
     @Published var isRegistered: Bool = false
+    @Published var isUpdated: Bool = false
+    @Published var isSignedOut: Bool = false
 
 
 
@@ -97,8 +99,10 @@ class UserViewModel: ObservableObject {
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
-                    defaults.removeObject(forKey: "jwttoken")
                     self.isAuthenticated = false
+                    self.isUpdated = true
+                    defaults.removeObject(forKey: "jwttoken")
+
                 }
             case .failure(let err):
                 print(err.localizedDescription)

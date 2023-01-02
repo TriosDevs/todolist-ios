@@ -1,20 +1,20 @@
 //
-//  CreateTaskModalView.swift
+//  UpdateTaskModalView.swift
 //  ToDoList
 //
-//  Created by Ardi Jorganxhi on 29.12.22.
+//  Created by Ardi Jorganxhi on 3.1.23.
 //
 
 import SwiftUI
 
-struct CreateTaskModalView: View {
+struct UpdateTaskModalView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var taskObject: TaskViewModel
+    @StateObject private var listObject = ListViewModel(listId: "0")
     var body: some View {
         ZStack {
 
             VStack(alignment: .center, spacing: 20.0) {
-                TextField("", text: $taskObject.name, prompt: Text("Give a name to your task!")
+                TextField("", text: $listObject.name, prompt: Text("Update your list name!")
                 )
                 .textFieldStyle(.roundedBorder)
                 .overlay(RoundedRectangle(cornerRadius: 20)
@@ -24,12 +24,12 @@ struct CreateTaskModalView: View {
                 HStack(spacing: 20.0){
 
                     Button(action: {
-
                         presentationMode.wrappedValue.dismiss()
-                        taskObject.createTask()
+                        listObject.createList()
+
 
                     }, label: {
-                        Text("Create")
+                        Text("Update")
 
                             .frame(width: 100)
                             .padding(.vertical, 1)
@@ -41,8 +41,8 @@ struct CreateTaskModalView: View {
                     .tint(.blue)
                     .buttonStyle(.borderedProminent)
                     .cornerRadius(25)
-                    .alert(isPresented: $taskObject.taskIsCreated){
-                        Alert(title: Text("Done!"), message: Text("Task is created successfully!"), dismissButton: .default(Text("Ok")))
+                    .alert(isPresented: $listObject.isCreated ){
+                        Alert(title: Text("Done!"), message: Text("List is created successfully!"), dismissButton: .default(Text("Ok")))
 
                     }
 
@@ -68,10 +68,10 @@ struct CreateTaskModalView: View {
             }
         }
     }
+}
 
-    struct CreateTaskModalView_Previews: PreviewProvider {
-        static var previews: some View {
-            CreateTaskModalView(taskObject: TaskViewModel(listId: "0"))
-        }
+struct UpdateTaskModalView_Previews: PreviewProvider {
+    static var previews: some View {
+        UpdateTaskModalView()
     }
 }
