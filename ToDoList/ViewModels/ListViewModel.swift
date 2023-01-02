@@ -31,6 +31,14 @@ class ListViewModel: ObservableObject {
         }
     }
 
+
+    func deletelistData(){
+
+        DispatchQueue.main.async {
+            self.listData.removeAll()
+        }
+    }
+
    
     
 
@@ -46,16 +54,19 @@ class ListViewModel: ObservableObject {
             switch result {
             case .success(let lists):
 
-                defaults.setValue(self.listId, forKey: "listId")
-                print(self.listId)
 
                 DispatchQueue.main.async {
-                    self.listData = lists
-                    if(!self.listData.isEmpty){
 
-                        
+                    if(self.listData.isEmpty){
+                        self.listData = lists
+                    }
+                    else{
+                        self.listData.removeAll()
+                        self.listData = lists
 
                     }
+
+
                     
                 }
 
@@ -92,6 +103,7 @@ class ListViewModel: ObservableObject {
             switch result {
             case .success(_):
                 print("List is updated!")
+                self.name = self.name
             case .failure(let err):
                 print(err.localizedDescription)
             }

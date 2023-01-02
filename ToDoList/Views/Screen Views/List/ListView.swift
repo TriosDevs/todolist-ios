@@ -44,7 +44,7 @@ struct ListView: View {
                             
                             
                             
-                            ListTemplateView(listName: list.name!, taskCount: 5)
+                            ListTemplateView(listName: list.name, taskCount: 5)
                                 .navigationDestination(isPresented: $listObject.navigateTask){
                                     TaskView(listId: String(list.id!))
                                 }
@@ -100,6 +100,9 @@ struct ListView: View {
                 
             }.onAppear{
                 listObject.getList()
+            }
+            .onDisappear{
+                listObject.deletelistData()
             }
             .sheet(isPresented: $modalObject.isPresented, content: {
                 CreateListModalView()
