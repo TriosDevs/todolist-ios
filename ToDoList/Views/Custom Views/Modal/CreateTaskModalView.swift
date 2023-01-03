@@ -71,7 +71,7 @@ struct CreateTaskModalView: View {
 
     struct CreateTaskModalView_Previews: PreviewProvider {
         static var previews: some View {
-            CreateTaskModalView(taskObject: TaskViewModel(listId: "0"))
+            CreateTaskModalView(taskObject: TaskViewModel(id: "0"))
         }
     }
 }

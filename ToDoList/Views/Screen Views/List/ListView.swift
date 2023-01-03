@@ -48,7 +48,7 @@ struct ListView: View {
                                 .navigationDestination(isPresented: $listObject.navigateTask){
                                     TaskView(listId: String(list.id!))
                                 }
-                                .sheet(isPresented: $modalObject.isPresented2, content: {
+                                .sheet(isPresented: $modalObject.createModal, content: {
                                     ListUpdateDeleteModalView(listObject: ListViewModel(listId: String(list.id!)))
                                         .environmentObject(modalObject)
                                         .presentationDetents([.height(300)])
@@ -59,7 +59,9 @@ struct ListView: View {
                                     listObject.goToTask()
                                 }
                                 .onLongPressGesture{
-                                    modalObject.setTrue2()
+
+                                    modalObject.setCreatedTrue()
+
                                 }
                             
                             
@@ -80,7 +82,7 @@ struct ListView: View {
                             .clipShape(Circle())
                             .offset(x: 130, y: -75)
                             .onTapGesture {
-                                modalObject.setTrue()
+                                modalObject.setCreatedTrue()
                             }
                     }
                     
@@ -104,7 +106,7 @@ struct ListView: View {
             .onDisappear{
                 listObject.deletelistData()
             }
-            .sheet(isPresented: $modalObject.isPresented, content: {
+            .sheet(isPresented: $modalObject.createModal, content: {
                 CreateListModalView()
                     .presentationDetents([.height(200)])
             })

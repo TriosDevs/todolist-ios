@@ -10,27 +10,23 @@ import Foundation
 
 class ModalViewModel: ObservableObject {
 
-    @Published var isPresented: Bool = false
-    @Published var isPresented2: Bool = false
+    @Published var createModal: Bool = false
+    @Published var updateModal: Bool = false
 
 
-    func setTrue(){
+    func setCreatedTrue(){
 
         DispatchQueue.main.async {
-            self.isPresented = true
+            self.createModal = true
         }
 
     }
 
-    func setTrue2(){
+    func setUpdatedTrue(){
         DispatchQueue.main.async {
-            self.isPresented2 = true
+            self.updateModal = true
         }
     }
 
-    func setFalse(){
-        DispatchQueue.main.async {
-            self.isPresented = false
-        }
-    }
+
 }

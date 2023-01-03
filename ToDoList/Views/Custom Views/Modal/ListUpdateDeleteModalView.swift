@@ -32,10 +32,10 @@ struct ListUpdateDeleteModalView: View {
                     .font(.system(size: 30))
                     .onTapGesture {
                         presentationMode.wrappedValue.dismiss()
-                        modalObject.setTrue()
+                        modalObject.setUpdatedTrue()
                     }
             }
-        }.sheet(isPresented: $modalObject.isPresented, content: {
+        }.sheet(isPresented: $modalObject.updateModal, content: {
             UpdateListModalView(listObject: listObject)
                 .presentationDetents([.height(300)])
         })

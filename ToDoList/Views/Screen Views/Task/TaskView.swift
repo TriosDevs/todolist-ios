@@ -11,7 +11,7 @@ struct TaskView: View {
 
     @StateObject private var modalObject = ModalViewModel()
 
-    @StateObject var taskObject = TaskViewModel(listId: "0")
+    @StateObject var taskObject = TaskViewModel(id: "0")
     @State var listId: String
 
 
@@ -31,7 +31,8 @@ struct TaskView: View {
 
                 VStack {
 
-                    AppBarWithBackButtonView().navigationBarBackButtonHidden(true)
+                    AppBarWithBackButtonView()
+                        .navigationBarBackButtonHidden(true)
 
                     Spacer()
 
@@ -63,14 +64,29 @@ struct TaskView: View {
 
                             TaskItemView()
                                 .padding(.vertical, 5)
+                                .onLongPressGesture {
+                                    modalObject.setUpdatedTrue()
+                                }
                             TaskItemView()
                                 .padding(.vertical, 5)
+                                .onLongPressGesture {
+                                    modalObject.setUpdatedTrue()
+                                }
                             TaskItemView()
                                 .padding(.vertical, 5)
+                                .onLongPressGesture {
+                                    modalObject.setUpdatedTrue()
+                                }
                             TaskItemView()
                                 .padding(.vertical, 5)
+                                .onLongPressGesture {
+                                    modalObject.setUpdatedTrue()
+                                }
                             TaskItemView()
                                 .padding(.vertical, 5)
+                                .onLongPressGesture {
+                                    modalObject.setUpdatedTrue()
+                                }
 
                         }
 
@@ -87,7 +103,7 @@ struct TaskView: View {
                             .clipShape(Circle())
                             .offset(x: 130, y: -75)
                             .onTapGesture {
-                                modalObject.setTrue()
+                                modalObject.setCreatedTrue()
                             }
                     }
                 } 
@@ -98,10 +114,16 @@ struct TaskView: View {
 
 
 
-            }.sheet(isPresented: $modalObject.isPresented){
-                CreateTaskModalView(taskObject: TaskViewModel(listId: listId))
+            }.sheet(isPresented: $modalObject.createModal){
+                CreateTaskModalView(taskObject: TaskViewModel(id: listId))
                     .presentationDetents([.height(200)])
+
             }
+            .sheet(isPresented: $modalObject.updateModal, content: {
+
+                TaskUpdateDeleteModalView(taskObject: TaskViewModel(id: "38"))
+                    .presentationDetents([.height(200)])
+            })
         }
     }
     }

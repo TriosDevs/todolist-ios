@@ -70,7 +70,7 @@ struct UpdateUserModalView: View {
 
                         Button(action: {
                             presentationMode.wrappedValue.dismiss()
-                            modalObject.setFalse()
+                            
 
 
                         }, label: {

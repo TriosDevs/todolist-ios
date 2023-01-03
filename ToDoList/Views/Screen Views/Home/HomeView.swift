@@ -63,13 +63,13 @@ struct HomeView: View {
                         .clipShape(Circle())
                         .offset(x: 130, y: -75)
                         .onTapGesture {
-                            modalObject.setTrue()
+                            modalObject.setCreatedTrue()
                         }
                 }
 
             
             }
-        }.sheet(isPresented: $modalObject.isPresented, content: {
+        }.sheet(isPresented: $modalObject.createModal, content: {
             CreateListModalView()
                 .presentationDetents([.height(200)])
         })

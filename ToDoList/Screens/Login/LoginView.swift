@@ -65,6 +65,11 @@ struct LoginView: View {
                         .tint(.blue)
                         .buttonStyle(.borderedProminent)
                         .cornerRadius(25)
+
+                        NavigationLink(destination: RegisterView()){
+
+                            Text("Or register...")
+                        }
                         
                         
                         

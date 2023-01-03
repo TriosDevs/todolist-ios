@@ -10,11 +10,12 @@ import SwiftUI
 struct UpdateTaskModalView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject private var listObject = ListViewModel(listId: "0")
+    @StateObject var taskObject: TaskViewModel
     var body: some View {
         ZStack {
 
             VStack(alignment: .center, spacing: 20.0) {
-                TextField("", text: $listObject.name, prompt: Text("Update your list name!")
+                TextField("", text: $taskObject.name, prompt: Text("Update your task name!")
                 )
                 .textFieldStyle(.roundedBorder)
                 .overlay(RoundedRectangle(cornerRadius: 20)
@@ -25,7 +26,7 @@ struct UpdateTaskModalView: View {
 
                     Button(action: {
                         presentationMode.wrappedValue.dismiss()
-                        listObject.createList()
+                        taskObject.updateTask()
 
 
                     }, label: {
@@ -72,6 +73,6 @@ struct UpdateTaskModalView: View {
 
 struct UpdateTaskModalView_Previews: PreviewProvider {
     static var previews: some View {
-        UpdateTaskModalView()
+        UpdateTaskModalView(taskObject: TaskViewModel(id: ""))
     }
 }

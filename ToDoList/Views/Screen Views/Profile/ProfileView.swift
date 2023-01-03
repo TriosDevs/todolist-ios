@@ -81,7 +81,7 @@ struct ProfileView: View {
                         }.offset(x: 50)
 
                         Button(action: {
-                            ModalObject.setTrue()
+                            ModalObject.setCreatedTrue()
                         }, label: {
                             Text("Update")
                                 .frame(width: 100)
@@ -99,7 +99,7 @@ struct ProfileView: View {
             }.onAppear{
                 UserModel.getUser()
             }
-            .sheet(isPresented: $ModalObject.isPresented){
+            .sheet(isPresented: $ModalObject.createModal){
                 UpdateUserModalView()
                     .presentationDetents([.height(300)])
         }
