@@ -1,30 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="57m-UY-ccs">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="7KV-xE-YnZ">
-            <objects>
-                <navigationController id="n8d-8d-NnM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YnY-u9-OAi">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gas-mn-BvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2497" y="26"/>
-        </scene>
         <!--Register View Controller-->
         <scene sceneID="3xM-te-rPA">
             <objects>
-                <viewController id="ow2-k4-aOL" customClass="RegisterViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ow2-k4-aOL" customClass="RegisterViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmU-E8-jfM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +30,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CiR-4G-xQJ">
                                 <rect key="frame" x="-52" y="-81" width="269" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -54,7 +41,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zaa-mn-gGw">
                                 <rect key="frame" x="-52" y="-81" width="269" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -117,6 +103,7 @@
                         <viewLayoutGuide key="safeArea" id="fyw-0c-mHD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Lju-MX-Jff"/>
                     <connections>
                         <outlet property="emailTextField" destination="L9F-tr-Xwa" id="Ut2-gJ-k8P"/>
                         <outlet property="nameTextField" destination="iHk-N9-YTg" id="TIj-O9-R6O"/>
@@ -126,12 +113,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vex-ZI-Zt6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-916.79389312977094" y="6.3380281690140849"/>
+            <point key="canvasLocation" x="2947" y="13"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="PSG-n5-mXj">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KKC-Hf-wiA" customClass="HomeViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DZI-hV-tag">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is home!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Z-oS-erB">
+                                <rect key="frame" x="124" y="439" width="145" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uGM-33-LCG"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="Tjh-CK-2NJ">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="medium"/>
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJl-Ny-yre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5319.8473282442746" y="698.59154929577471"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="RtZ-7X-PsI">
+            <objects>
+                <viewController storyboardIdentifier="ListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hIf-9n-EPe" customClass="ListViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a9O-HU-g9e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8a-DU-nAZ">
+                                <rect key="frame" x="124" y="441" width="145" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GWV-ja-8hQ"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="checklist" catalog="system" selectedImage="checklist" id="FVs-sm-ne4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqp-HK-IiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6170" y="699"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="O13-uY-sz1">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P9h-hQ-C7D" customClass="ProfileViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fGm-u1-xWO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jz1-Wv-zty">
+                                <rect key="frame" x="124" y="438" width="145" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xiR-h1-pVk"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person" id="zcv-cn-lWC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9f-5x-loD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6927" y="699"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +208,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6S-fx-bb4">
                                 <rect key="frame" x="-36" y="-37" width="269" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -166,7 +230,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-Lh-A6v">
                                 <rect key="frame" x="55" y="517" width="269" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -199,6 +262,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="crg-Kg-WaG"/>
                     <connections>
                         <outlet property="emailTextField" destination="P3b-Lh-A6v" id="RsD-oo-euf"/>
                         <outlet property="passwordTextField" destination="aEW-kp-eb9" id="Nzc-MR-NqQ"/>
@@ -206,12 +270,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="3933.5877862595416" y="12.67605633802817"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y2C-XY-7kM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="57m-UY-ccs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="djX-bi-msl">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wdr-cc-efN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b40-Z9-65d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="13"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="XTw-CO-l5j">
+            <objects>
+                <tabBarController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pxi-cp-mUd" customClass="TabBarViewController" customModule="ToDoList_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="house" catalog="system" id="efp-Yz-V2X">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance" backgroundImage="house" catalog="system"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KKC-Hf-wiA" kind="relationship" relationship="viewControllers" id="9m3-aV-kA8"/>
+                        <segue destination="hIf-9n-EPe" kind="relationship" relationship="viewControllers" id="Vkl-to-yJw"/>
+                        <segue destination="P9h-hQ-C7D" kind="relationship" relationship="viewControllers" id="hkO-ZM-Hih"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzu-p5-JXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5810" y="13"/>
         </scene>
     </scenes>
     <resources>
         <image name="LOGIN 1" width="504" height="415"/>
         <image name="Login" width="762" height="1355"/>
+        <image name="checklist" catalog="system" width="128" height="107"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

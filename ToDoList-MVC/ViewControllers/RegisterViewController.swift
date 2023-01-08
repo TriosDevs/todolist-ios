@@ -27,11 +27,21 @@ class RegisterViewController: UIViewController {
 
     @IBAction func register(_ sender: Any) {
 
-        UserService().register(name: nameTextField.text!, surname: surnameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!){result in
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+
+        UserService().register(name: nameTextField.text!, surname: surnameTextField.text!, mail: emailTextField.text!, password: passwordTextField.text!){ result in
             switch result {
 
             case .success(_):
-                print("User is registered!")
+                DispatchQueue.main.async {
+                    print("User is registered!")
+                    self.navigationController?.pushViewController(loginVC, animated: true)
+                    loginVC.navigationItem.hidesBackButton = true
+
+                }
+
+
 
             case .failure(let err):
                 print(err.localizedDescription)

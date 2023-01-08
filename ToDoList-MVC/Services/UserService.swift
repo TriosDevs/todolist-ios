@@ -15,7 +15,7 @@ struct UserService {
 
         var url = baseApi + "/auth"
 
-            guard let url = URL(string: baseApi) else {
+            guard let url = URL(string: url) else {
 
                 completion(.failure(.invalidURL))
                 return
@@ -30,7 +30,7 @@ struct UserService {
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.httpBody = bodyJSON
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
             URLSession.shared.dataTask(with: request){ data, res, err in
 
@@ -39,26 +39,17 @@ struct UserService {
                     return
                 }
 
-                do{
-
-                    guard let res = try? JSONDecoder().decode(RegisterResponse.self, from: data)
-                    else{
-                        completion(.failure(.decodingError))
-                        return
-                    }
-
-                    completion(.success("User is registered!"))
+                let res = try? JSONDecoder().decode(RegisterResponse.self, from: data)
+                print(res)
 
 
-
-                }
-
+                completion(.success("User is registered!"))
 
 
             }.resume()
 
 
-        }
+    }
 
 
 
@@ -86,7 +77,7 @@ struct UserService {
                 return
             }
 
-            let res = try? JSONDecoder().decode(LoginResponse.self, from: data).self
+            let res = try? JSONDecoder().decode(LoginResponse.self, from: data)
 
             print(res)
 

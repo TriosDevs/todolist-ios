@@ -22,6 +22,11 @@
 		2E5F3F502968C31200678F0C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F3F4F2968C31200678F0C /* LoginResponse.swift */; };
 		2E5F3F542968C97400678F0C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F3F532968C97400678F0C /* RegisterViewController.swift */; };
 		2E5F3F562968CA8C00678F0C /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F3F552968CA8C00678F0C /* RegisterResponse.swift */; };
+		2EAF93E7296ADD11006496CC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF93E6296ADD11006496CC /* TabBarViewController.swift */; };
+		2EAF93E9296AE12A006496CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF93E8296AE12A006496CC /* HomeViewController.swift */; };
+		2EAF93EB296AE133006496CC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF93EA296AE133006496CC /* ListViewController.swift */; };
+		2EAF93ED296AE13E006496CC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF93EC296AE13E006496CC /* ProfileViewController.swift */; };
+		2EB8F8FC2969684900217838 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8F8FB2969684900217838 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		2E5F3F4F2968C31200678F0C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2E5F3F532968C97400678F0C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2E5F3F552968CA8C00678F0C /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		2EAF93E6296ADD11006496CC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		2EAF93E8296AE12A006496CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2EAF93EA296AE133006496CC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		2EAF93EC296AE13E006496CC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2EB8F8FB2969684900217838 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,11 @@
 			children = (
 				2E5F3F2A2968935B00678F0C /* LoginViewController.swift */,
 				2E5F3F532968C97400678F0C /* RegisterViewController.swift */,
+				2EB8F8FB2969684900217838 /* MainViewController.swift */,
+				2EAF93E6296ADD11006496CC /* TabBarViewController.swift */,
+				2EAF93E8296AE12A006496CC /* HomeViewController.swift */,
+				2EAF93EA296AE133006496CC /* ListViewController.swift */,
+				2EAF93EC296AE13E006496CC /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -222,9 +237,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E5F3F2B2968935B00678F0C /* LoginViewController.swift in Sources */,
+				2EB8F8FC2969684900217838 /* MainViewController.swift in Sources */,
 				2E5F3F542968C97400678F0C /* RegisterViewController.swift in Sources */,
 				2E5F3F452968BB0E00678F0C /* LoginModel.swift in Sources */,
+				2EAF93E7296ADD11006496CC /* TabBarViewController.swift in Sources */,
+				2EAF93E9296AE12A006496CC /* HomeViewController.swift in Sources */,
 				2E5F3F4D2968BCED00678F0C /* UserService.swift in Sources */,
+				2EAF93ED296AE13E006496CC /* ProfileViewController.swift in Sources */,
 				2E5F3F3F2968BAB400678F0C /* NetworkError.swift in Sources */,
 				2E5F3F502968C31200678F0C /* LoginResponse.swift in Sources */,
 				2E5F3F432968BAC900678F0C /* RegisterModel.swift in Sources */,
@@ -232,6 +251,7 @@
 				2E5F3F412968BAC000678F0C /* AuthenticationError.swift in Sources */,
 				2E5F3F562968CA8C00678F0C /* RegisterResponse.swift in Sources */,
 				2E5F3F292968935B00678F0C /* SceneDelegate.swift in Sources */,
+				2EAF93EB296AE133006496CC /* ListViewController.swift in Sources */,
 				2E5F3F4B2968BC5700678F0C /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

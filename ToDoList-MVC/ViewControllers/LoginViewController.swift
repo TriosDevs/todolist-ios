@@ -23,8 +23,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.layer.cornerRadius = 35.0
-        view.addSubview(emailTextField)
+        self.emailTextField.layer.cornerRadius = 35.0
+
 
 
         
@@ -38,11 +38,18 @@ class LoginViewController: UIViewController {
 
 
 
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! UITabBarController
+
         UserService().login(mail: emailTextField.text!, password: passwordTextField.text!){result in
             switch result{
             case .success(_):
-             
-                print("Logged in succesfully!")
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(mainVC, animated: true)
+                    mainVC.navigationItem.hidesBackButton = true
+                }
+
+
             case .failure(let err):
                 print(err.localizedDescription)
             }
