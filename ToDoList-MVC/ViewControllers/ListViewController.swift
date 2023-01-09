@@ -9,10 +9,12 @@ import UIKit
 
 class ListViewController: UIViewController {
 
+    @IBOutlet weak var createListModal: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        createListModal.layer.cornerRadius = createListModal.frame.width / 2
+        createListModal.layer.masksToBounds = true
     }
     
 

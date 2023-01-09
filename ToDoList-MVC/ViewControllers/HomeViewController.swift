@@ -9,8 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var createListButton: UIButton!
+    @IBOutlet weak var homeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        createListButton.layer.cornerRadius = createListButton.frame.width / 2
+        createListButton.layer.masksToBounds = true
 
         // Do any additional setup after loading the view.
     }

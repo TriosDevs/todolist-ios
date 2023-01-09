@@ -37,13 +37,14 @@ class LoginViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
 
 
-
+        let defaults = UserDefaults.standard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! UITabBarController
 
         UserService().login(mail: emailTextField.text!, password: passwordTextField.text!){result in
             switch result{
-            case .success(_):
+            case .success(let token):
+                defaults.setValue(token, forKey: "jwttoken")
                 DispatchQueue.main.async {
                     self.navigationController?.pushViewController(mainVC, animated: true)
                     mainVC.navigationItem.hidesBackButton = true
